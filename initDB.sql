@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS companies (
+  id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+  name VARCHAR(100) NOT NULL ,
+  address VARCHAR(100) NOT NULL ,
+  country VARCHAR(100) NOT NULL ,
+  city  VARCHAR(100) NOT NULL ,
+
+
+  INDEX (name)
+
+)
+  ENGINE InnoDB;
