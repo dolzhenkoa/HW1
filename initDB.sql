@@ -13,6 +13,7 @@ CREATE TABLE IF NOT EXISTS developers (
   id        INT NOT NULL AUTO_INCREMENT  PRIMARY KEY,
   name      VARCHAR(100) NOT NULL ,
   age       INT NOT NULL ,
+  salary    INT,
   country   VARCHAR(100) NOT NULL ,
   city      VARCHAR(100) NOT NULL ,
   join_date date,
