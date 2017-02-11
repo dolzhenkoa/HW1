@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS skills(
   developer_id INT,
   JAVA VARCHAR (1),
   "C++" VARCHAR (1),
-  C# VARCHAR (1),
+  "C#" VARCHAR (1),
   JavaScript VARCHAR(1),
   PHP VARCHAR(1),
   PYTHON VARCHAR(1),
