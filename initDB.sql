@@ -16,13 +16,14 @@ CREATE TABLE IF NOT EXISTS developers (
   country   VARCHAR(100) NOT NULL ,
   city      VARCHAR(100) NOT NULL ,
   join_date date,
+  dev_skills INT,
 
   INDEX (name)
 )
 ENGINE InnoDB;
 
 CREATE TABLE IF NOT EXISTS skills(
-  developer_id INT NOT NULL AUTO_INCREMENT  PRIMARY KEY,
+  developer_id INT PRIMARY KEY NOT NULL ,
   JAVA        INT,
   CPlusPlus   int,
   CSharp      int,
