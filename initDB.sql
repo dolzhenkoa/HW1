@@ -1,13 +1,11 @@
 CREATE TABLE IF NOT EXISTS companies (
-  id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
-  name VARCHAR(100) NOT NULL ,
+  id      INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+  name    VARCHAR(100) NOT NULL ,
   address VARCHAR(100) NOT NULL ,
   country VARCHAR(100) NOT NULL ,
-  city  VARCHAR(100) NOT NULL ,
-
+  city    VARCHAR(100) NOT NULL ,
 
   INDEX (name)
-
 )
 ENGINE InnoDB;
 
@@ -19,7 +17,9 @@ CREATE TABLE IF NOT EXISTS developers (
   city  VARCHAR(100) NOT NULL ,
   join_date date,
   skills_id INT,
-  FOREIGN KEY (skills_id) REFERENCES skills(developer_id)
+  FOREIGN KEY (skills_id) REFERENCES skills(developer_id),
+
+  INDEX (name)
 )
 ENGINE InnoDB;
 
