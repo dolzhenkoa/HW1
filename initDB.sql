@@ -46,5 +46,25 @@ CREATE TABLE IF NOT EXISTS Dev_Skills(
 )
 ENGINE InnoDB;
 
+CREATE TABLE IF NOT EXISTS customers (
+  id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+  name      VARCHAR(100) NOT NULL ,
+  inn INT,
+  edrpou INT,
 
+  INDEX name (name),
+  INDEX inn (inn),
+  INDEX edrpou (edrpou)
+)
+ENGINE InnoDB;
+
+CREATE TABLE IF NOT EXISTS projects_customers (
+  project_id    INT NOT NULL,
+  customers_id INT NOT NULL,
+  
+  FOREIGN KEY (customers_id) REFERENCES customers(id),
+  FOREIGN KEY (project_id)  REFERENCES projects(id),
+  UNIQUE (customers_id, project_id)
+)
+ENGINE InnoDB;
 
