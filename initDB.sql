@@ -61,4 +61,14 @@ CREATE TABLE IF NOT EXISTS dev_projects(
   FOREIGN KEY (project_id) REFERENCES projects(id),
   UNIQUE (developer_id, project_id)
 )
+ENGINE InnoDB;
 
+CREATE TABLE IF NOT EXISTS project_company(
+  project_id INT NOT NULL ,
+  company_id INT NOT NULL ,
+
+  FOREIGN KEY (project_id) REFERENCES projects(id),
+  FOREIGN KEY (company_id) REFERENCES projects(id),
+  UNIQUE (project_id, company_id)
+)
+ENGINE InnoDB;
