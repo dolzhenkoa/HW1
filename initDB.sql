@@ -72,3 +72,6 @@ CREATE TABLE IF NOT EXISTS project_company(
   UNIQUE (project_id, company_id)
 )
 ENGINE InnoDB;
+
+ALTER TABLE developers ADD salary INT,
+ENGINE InnoDB;
