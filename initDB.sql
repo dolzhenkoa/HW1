@@ -53,3 +53,12 @@ CREATE TABLE IF NOT EXISTS projects(
 )
 ENGINE InnoDB;
 
+CREATE TABLE IF NOT EXISTS dev_projects(
+  developer_id INT NOT NULL ,
+  project_id INT NOT NULL ,
+
+  FOREIGN KEY (developer_id) REFERENCES developers(id),
+  FOREIGN KEY (project_id) REFERENCES projects(id),
+  UNIQUE (developer_id, project_id)
+)
+
